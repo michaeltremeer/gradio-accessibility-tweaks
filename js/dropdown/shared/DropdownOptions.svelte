@@ -83,7 +83,7 @@
 		style:max-height={`calc(${max_height}px - var(--window-padding))`}
 		style:width={input_width + "px"}
 		bind:this={listElement}
-		role="listbox"
+		role="combobox"
 	>
 		{#each filtered_indices as index}
 			<li
