@@ -9,6 +9,7 @@
 	class:hide={!show_label}
 	class:has-info={info != null}
 	data-testid="block-info"
+	tabindex=0
 >
 	<slot />
 </span>
