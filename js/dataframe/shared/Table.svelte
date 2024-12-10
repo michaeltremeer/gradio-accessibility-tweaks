@@ -705,7 +705,7 @@
 			<tbody>
 				<tr>
 					{#each max as { value, id }, j (id)}
-						<td tabindex="-1" bind:this={cells[j]}>
+						<td tabindex="0" bind:this={cells[j]}>
 							<div class="cell-wrap">
 								<EditableCell
 									{value}
