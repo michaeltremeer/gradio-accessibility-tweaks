@@ -72,6 +72,7 @@
 	class:edit
 	on:focus|preventDefault
 	style={styling}
+	aria-label={value === "" ? "blank cell" : undefined}
 >
 	{#if datatype === "html"}
 		{@html value}
