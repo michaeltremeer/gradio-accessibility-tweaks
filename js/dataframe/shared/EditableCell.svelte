@@ -58,7 +58,7 @@
 		bind:this={el}
 		bind:value={_value}
 		class:header
-		tabindex="-1"
+		tabindex="0"
 		on:blur={handle_blur}
 		use:use_focus
 		on:keydown
@@ -67,7 +67,7 @@
 
 <span
 	on:dblclick
-	tabindex="-1"
+	tabindex="0"
 	role="button"
 	class:edit
 	on:focus|preventDefault
