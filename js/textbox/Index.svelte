@@ -84,5 +84,6 @@
 		on:select={(e) => gradio.dispatch("select", e.detail)}
 		on:focus={() => gradio.dispatch("focus")}
 		disabled={!interactive}
+		readonly={!interactive}
 	/>
 </Block>

@@ -650,16 +650,14 @@
 	{/if}
 	<div
 		bind:this={parent}
-		class="table-wrap"
-		class:dragging
-		class:no-wrap={!wrap}
-		style="height:{table_height}px"
-		on:keydown={(e) => handle_keydown(e)}
-		role="grid"
-		tabindex="0"
-	>
-		<table
-			bind:clientWidth={t_width}
+        class="table-wrap"
+        class:dragging
+        class:no-wrap={!wrap}
+        style="height:{table_height}px"
+        on:keydown={(e) => handle_keydown(e)}
+    >
+        <table
+            bind:clientWidth={t_width}
 			bind:this={table}
 			class:fixed-layout={column_widths.length != 0}
 		>
@@ -707,7 +705,7 @@
 			<tbody>
 				<tr>
 					{#each max as { value, id }, j (id)}
-						<td tabindex="-1" bind:this={cells[j]}>
+						<td tabindex="0" bind:this={cells[j]}>
 							<div class="cell-wrap">
 								<EditableCell
 									{value}

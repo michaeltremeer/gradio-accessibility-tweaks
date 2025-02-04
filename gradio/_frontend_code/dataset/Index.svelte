@@ -155,7 +155,7 @@
 		</div>
 	{:else}
 		<div class="table-wrap">
-			<table tabindex="0" role="grid">
+			<table tabindex="0" role="grid" aria-label="Examples">
 				<thead>
 					<tr class="tr-head">
 						{#each headers as header}

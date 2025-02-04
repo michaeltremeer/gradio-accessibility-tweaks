@@ -61,7 +61,7 @@
 			/>
 		{/if}
 	</div>
-	<button on:click={handle_click}>
+	<button on:click={handle_click} aria-label={label || i18n("image.image")}>
 		<div class:selectable class="image-container">
 			<Image src={value.url} alt="" loading="lazy" />
 		</div>

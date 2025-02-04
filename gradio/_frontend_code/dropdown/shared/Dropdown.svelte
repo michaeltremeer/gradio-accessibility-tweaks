@@ -188,7 +188,7 @@
 		<div class="wrap-inner" class:show_options>
 			<div class="secondary-wrap">
 				<input
-					role="listbox"
+					role="combobox"
 					aria-controls="dropdown-options"
 					aria-expanded={show_options}
 					aria-label={label}
