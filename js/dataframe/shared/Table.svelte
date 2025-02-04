@@ -686,6 +686,7 @@
 									class:sorted={sort_by === i}
 									class:des={sort_by === i && sort_direction === "des"}
 									class="sort-button {sort_direction} "
+									tabindex="0"
 								>
 									<svg
 										width="1em"
@@ -768,6 +769,7 @@
 									class:sorted={sort_by === i}
 									class:des={sort_by === i && sort_direction === "des"}
 									class="sort-button {sort_direction} "
+									tabindex="0"
 									on:click={() => handle_sort(i)}
 								>
 									<svg
