@@ -17,6 +17,7 @@
 	export let label: string;
 	export let info: string | undefined = undefined;
 	export let disabled = false;
+	export let readonly = false;
 	export let show_label = true;
 	export let container = true;
 	export let max_lines: number;
@@ -193,6 +194,7 @@
 				bind:this={el}
 				{placeholder}
 				{disabled}
+				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
 				on:blur
@@ -209,6 +211,7 @@
 				bind:this={el}
 				{placeholder}
 				{disabled}
+				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
 				on:blur
@@ -225,6 +228,7 @@
 				bind:this={el}
 				{placeholder}
 				{disabled}
+				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
 				on:blur
@@ -259,6 +263,7 @@
 			{placeholder}
 			rows={lines}
 			{disabled}
+			{readonly}
 			{autofocus}
 			on:keypress={handle_keypress}
 			on:blur
@@ -302,7 +307,9 @@
 		border-radius: var(--input-radius);
 	}
 	input:disabled,
-	textarea:disabled {
+	textarea:disabled,
+	input:read-only,
+	textarea:read-only {
 		-webkit-text-fill-color: var(--body-text-color);
 		-webkit-opacity: 1;
 		opacity: 1;
