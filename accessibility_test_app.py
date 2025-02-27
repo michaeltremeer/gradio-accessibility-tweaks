@@ -179,6 +179,13 @@ with gr.Blocks(
         line_breaks=True,
         sanitize_html=False,
     )
+    bench_deployment_type_radio = gr.Radio(
+        label="Radio element",
+        choices=["Option 1", "Option 2"],
+        value="PTU",
+        interactive=True,
+        scale=5,
+    )
     dropdown_options = [f"Option {i}" for i in range(1, 40)]
     gr.Dropdown(
         label="Dropdown element",
