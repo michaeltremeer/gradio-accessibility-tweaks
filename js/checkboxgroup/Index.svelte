@@ -80,8 +80,8 @@
 					}}
 					checked={value.includes(internal_value)}
 					type="checkbox"
-					name={internal_value?.toString()}
-					title={internal_value?.toString()}
+					name={`${internal_value?.toString()} ${i + 1} of ${choices.length}`}
+					title={`${internal_value?.toString()} ${i + 1} of ${choices.length}`}
 				/>
 				<span class="ml-2">{display_value}</span>
 			</label>
