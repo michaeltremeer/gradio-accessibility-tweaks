@@ -17,7 +17,6 @@
 	export let label: string;
 	export let info: string | undefined = undefined;
 	export let disabled = false;
-	export let readonly = false;
 	export let show_label = true;
 	export let container = true;
 	export let max_lines: number;
@@ -177,6 +176,8 @@
 			destroy: () => _el.removeEventListener("input", resize)
 		};
 	}
+
+	$: readonly = disabled;
 </script>
 
 <!-- svelte-ignore a11y-autofocus -->
@@ -193,7 +194,6 @@
 				bind:value
 				bind:this={el}
 				{placeholder}
-				{disabled}
 				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
@@ -210,7 +210,6 @@
 				bind:value
 				bind:this={el}
 				{placeholder}
-				{disabled}
 				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
@@ -227,7 +226,6 @@
 				bind:value
 				bind:this={el}
 				{placeholder}
-				{disabled}
 				{readonly}
 				{autofocus}
 				on:keypress={handle_keypress}
@@ -262,7 +260,6 @@
 			bind:this={el}
 			{placeholder}
 			rows={lines}
-			{disabled}
 			{readonly}
 			{autofocus}
 			on:keypress={handle_keypress}
@@ -308,10 +305,13 @@
 	}
 	input:disabled,
 	textarea:disabled,
+	input[readonly],
+	textarea[readonly],
 	input:read-only,
 	textarea:read-only {
 		-webkit-text-fill-color: var(--body-text-color);
 		-webkit-opacity: 1;
+		background-color: #f3f4f6;
 		opacity: 1;
 	}
 
